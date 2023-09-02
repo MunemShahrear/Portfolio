@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\BlogController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,10 +20,23 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('backend.pages.dashboard');
-});
+})->name('dashboard');
+//blog route
+
 Route::get('/create/blog', function () {
     return view('backend.pages.blog.createBlog');
 })->name('create.blog');
+
+
+Route::post('/store/blog', [BlogController::class, 'store'])->name('blog.store');
+
+
+Route::get('/blog', function () {
+    return view('backend.pages.blog.allBlog');
+})->name('all.blog');
+
+
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

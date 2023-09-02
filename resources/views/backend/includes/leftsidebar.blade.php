@@ -10,7 +10,7 @@
               <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
             </li>
             
-            <li class="dropdown"><a href="" class="nav-link menu-title link-nav" href="javascript:void(0)"><i data-feather="home"></i><span>Dashboard</span></a>
+            <li class="dropdown"><a class="nav-link menu-title link-nav" href="{{route('dashboard')}}"><i data-feather="home"></i><span>Dashboard</span></a>
           
             </li>
           
@@ -21,7 +21,7 @@
 </a>
               <ul class="nav-submenu menu-content">
                 <li><a href="{{route('create.blog')}}"><i class="fa fa-pencil"></i> Write Blog</a></li>
-                <li><a href=""><i class="fa fa-list"></i> All Blog's</a></li>
+                <li><a href="{{route('all.blog')}}"><i class="fa fa-list"></i> All Blog's</a></li>
               </ul>
             </li>
             

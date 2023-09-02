@@ -42,6 +42,7 @@
     .page-wrapper.modern-sidebar.compact-wrapper .page-body-wrapper header.main-nav .main-navbar .nav-menu {
         height: calc(100vh - 100px);
     }
+  
 </style>
 
 @yield('style')
