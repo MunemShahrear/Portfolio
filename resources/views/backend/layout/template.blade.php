@@ -5,7 +5,7 @@
 
     <body>
         <!-- Loader  -->
-        @include('backend.includes.loader')
+        @include('backend.includes.preloader')
         <!-- page-wrapper Start       -->
         <div class="page-wrapper compact-wrapper" id="pageWrapper">
             <!-- Page Header Start-->

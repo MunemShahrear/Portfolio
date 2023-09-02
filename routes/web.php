@@ -21,7 +21,9 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('backend.pages.dashboard');
 });
-
+Route::get('/create/blog', function () {
+    return view('backend.pages.blog.createBlog');
+})->name('create.blog');
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

@@ -15,18 +15,16 @@
             </li>
           
            
-            <li class="dropdown">          <a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="database"></i><span>Data Tables   </span></a>
+            <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)">
+  <i class="fa fa-newspaper-o"></i>
+  <span style="margin-left: 5px;">Blog</span>
+</a>
               <ul class="nav-submenu menu-content">
-                <li><a href="datatable-basic-init.html">Basic Init</a></li>
-                <li><a href="datatable-advance.html">Advance Init</a></li>
-                <li><a href="datatable-styling.html">Styling</a></li>
-                <li><a href="datatable-AJAX.html">AJAX</a></li>
-                <li><a href="datatable-server-side.html">Server Side</a></li>
-                <li><a href="datatable-plugin.html">Plug-in</a></li>
-                <li><a href="datatable-API.html">API</a></li>
-                <li><a href="datatable-data-source.html">Data Sources</a></li>
+                <li><a href="{{route('create.blog')}}"><i class="fa fa-pencil"></i> Write Blog</a></li>
+                <li><a href=""><i class="fa fa-list"></i> All Blog's</a></li>
               </ul>
             </li>
+            
 
            
             

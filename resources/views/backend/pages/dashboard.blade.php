@@ -27,9 +27,9 @@
                 <div class="card o-hidden border-0">
                 <div class="bg-primary b-r-4 card-body">
                     <div class="media static-top-widget">
-                    <div class="align-self-center text-center"><i data-feather="database"></i></div>
-                    <div class="media-body"><span class="m-0">Earnings</span>
-                        <h4 class="mb-0 counter">6659</h4><i class="icon-bg" data-feather="database"></i>
+                    <div class="align-self-center text-center"><i class="fa fa-newspaper-o fa-2x"></i></div>
+                    <div class="media-body"><span class="m-0">Blogs</span>
+                        <h4 class="mb-0 counter">6659</h4><i class="fa fa-newspaper-o fa-5x icon-bg" ></i>
                     </div>
                     </div>
                 </div>
@@ -39,9 +39,9 @@
                 <div class="card o-hidden border-0">
                 <div class="bg-secondary b-r-4 card-body">
                     <div class="media static-top-widget">
-                    <div class="align-self-center text-center"><i data-feather="shopping-bag"></i></div>
-                    <div class="media-body"><span class="m-0">Products</span>
-                        <h4 class="mb-0 counter">9856</h4><i class="icon-bg" data-feather="shopping-bag"></i>
+                    <div class="align-self-center text-center"><i class="fa fa-eye fa-2x"></i></div>
+                    <div class="media-body"><span class="m-0">Views</span>
+                        <h4 class="mb-0 counter">9856</h4><i class="fa fa-eye fa-5x icon-bg" ></i>
                     </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                 <div class="bg-primary b-r-4 card-body">
                     <div class="media static-top-widget">
                     <div class="align-self-center text-center"><i data-feather="user-plus"></i></div>
-                    <div class="media-body"><span class="m-0">New Use</span>
+                    <div class="media-body"><span class="m-0">New User</span>
                         <h4 class="mb-0 counter">4531</h4><i class="icon-bg" data-feather="user-plus"></i>
                     </div>
                     </div>
