@@ -14,16 +14,50 @@
           
             </li>
           
-           
-            <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)">
-  <i class="fa fa-newspaper-o"></i>
-  <span style="margin-left: 5px;">Blog</span>
-</a>
-              <ul class="nav-submenu menu-content">
-                <li><a href="{{route('create.blog')}}"><i class="fa fa-pencil"></i> Write Blog</a></li>
-                <li><a href="{{route('all.blog')}}"><i class="fa fa-list"></i> All Blog's</a></li>
-              </ul>
+           <!-- Blog Area Start-->
+            <li class="dropdown">
+                  <a class="nav-link menu-title" href="javascript:void(0)">
+                      <i class="fa fa-newspaper-o"></i>
+                      <span style="margin-left: 5px;">Blog</span>
+                  </a>
+
+                  <ul class="nav-submenu menu-content">
+                    <li><a href="{{route('create.blog')}}"><i class="fa fa-pencil"></i> Write Blog</a></li>
+                    <li><a href="{{route('all.blog')}}"><i class="fa fa-list"></i> All Blog's</a></li>
+                  </ul>
+
             </li>
+             <!-- Blog Area Start-->
+             
+           <!-- Profile Area Start-->
+            <li class="dropdown">
+                  <a class="nav-link menu-title" href="javascript:void(0)">
+                      <i class="fa fa-user"></i>
+                      <span style="margin-left: 5px;">Profile</span>
+                  </a>
+
+                  <ul class="nav-submenu menu-content">
+                    <li><a href="{{route('create.profile')}}"><i class="fa fa-edit"></i>Edit profile</a></li>
+                 
+                  </ul>
+
+            </li>
+             <!-- Profile Area Start-->
+
+             <!-- Banner Area Start-->
+            <li class="dropdown">
+                  <a class="nav-link menu-title" href="javascript:void(0)">
+                      <i class="fa fa-clipboard"></i>
+                      <span style="margin-left: 5px;">Banner</span>
+                  </a>
+
+                  <ul class="nav-submenu menu-content">
+                  
+                    <li><a href="{{route('all.blog')}}"><i class="fa fa-edit"></i>Edit profile</a></li>
+                  </ul>
+
+            </li>
+             <!-- banner Area Start-->
             
 
            

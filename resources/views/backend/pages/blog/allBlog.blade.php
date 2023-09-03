@@ -15,29 +15,34 @@
           <th>SN</th>
           <th>Thumbnail</th>
           <th>Blog Title</th>
+          <th>Published Date</th>
           <th>Action</th>
         </tr>
       </thead>
       <tbody>
+      @php
+      $blogs = App\Models\Blog::orderBy('created_at', 'desc')->get();
+    
+        $count=0;
+     @endphp
         <!-- Table rows with data -->
+        @foreach( $blogs as $blog)
+        @php
+     
+        $count++;
+        @endphp
         <tr>
-          <td>1</td>
-          <td><img src="image1.jpg" alt="Blog Image" width="50"></td>
-          <td>Blog Title 1</td>
+          <td>{{ $count }}</td>
+          <td><img src="{{ asset('uploads/'. $blog->blog_image) }}" alt="Blog Image" width="50"></td>
+          <td> {{ $blog->blog_title }}</td>
+          <td> {{ $blog->created_at }}</td>
           <td>
             <button class="btn btn-primary btn-sm">Edit</button>
             <button class="btn btn-danger btn-sm">Delete</button>
           </td>
         </tr>
-        <tr>
-          <td>2</td>
-          <td><img src="image2.jpg" alt="Blog Image" width="50"></td>
-          <td>Blog Title 2</td>
-          <td>
-            <button class="btn btn-primary btn-sm">Edit</button>
-            <button class="btn btn-danger btn-sm">Delete</button>
-          </td>
-        </tr>
+        @endforeach
+        
         <!-- Add more rows as needed -->
       </tbody>
     </table> </div>

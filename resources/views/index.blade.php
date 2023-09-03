@@ -8,8 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="Sajal">
     <meta name="description" content="Sajal">
+    @php 
+                $proName = App\Models\Profile::first();
+                
+                if($proName->freelance_status==1){
+                $FS='Available';}
+                else{
+                $FS='Busy';}
+              @endphp
     <!-- title -->
-    <title>Sajal</title>
+    <title>
+              {{ $proName->name }}
+            </title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     @include('frontend.include.css')
@@ -26,7 +36,7 @@
         <nav class="navbar header-nav header-dark navbar-expand-lg">
             <div class="container">
                 <!-- Brand -->
-                <a class="navbar-brand" href="index.html">Sajal <span class="theme-bg"></span></a>
+                <a class="navbar-brand" href="index.html">  {{ $proName->name }}<span class="theme-bg"></span></a>
                 <!-- / -->
                 <!-- Mobile Toggle -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-toggle" aria-controls="navbar-collapse-toggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,8 +69,8 @@
                     <div class="col-md-6">
                         <div class="ht-text">
                             <h6>Hello there...</h6>
-                            <h1>Sajal Ehsan</h1>
-                            <h2>Senior Content Developer<span id="type-it"></span></h2>
+                            <h1>{{ $proName->name }} {{ $proName->lastname}}</h1>
+                            <h2>{{ $proName->designation }}<span id="type-it"></span></h2>
                             <p>Step into my digital realm where technology's symphony harmonizes with the art of storytelling. </p>
                             <div class="btn-bar go-to">
                                 <a class="m-btn m-btn-theme" href="#work">my work</a>
@@ -87,7 +97,7 @@
                     <div class="col-md-12">
                         <div class="section-title">
                             <h3 class="dark-color text-uppercase">ABOUT ME</h3>
-                            <p class="text-uppercase small">A senior content developer</p>
+                            <p class="text-uppercase small">{{ $proName->designation }}</p>
                         </div>
                     </div>
                 </div>
@@ -105,14 +115,14 @@
                     </div>
                     <div class="col-lg-7 m-15px-tb">
                         <div class="about-me">
-                            <h4>I'M Sajal Ehsan</h4>
-                            <h6>A Senior <span class="theme-color">Content </span> Writer at <span class="theme-color">10 Scopes</span></h6>
+                            <h4>I'M {{ $proName->name }} {{ $proName->lastname}}</h4>
+                            <h6>{{ $proName->designation }}</span></h6>
                             <p>blending my educational background in BBA with my unwavering passion for new technology and gaming.</p>
                             <div class="row about-list">
                                 <div class="col-md-6">
                                     <div class="media">
                                         <label>Birthday</label>
-                                        <p>4th april 1991</p>
+                                        <p>{{ $proName->birthday }}</p>
                                     </div>
                                     <div class="media">
                                         <label>Age</label>
@@ -120,29 +130,29 @@
                                     </div>
                                     <div class="media">
                                         <label>Residence</label>
-                                        <p>Bangladesh</p>
+                                        <p>{{ $proName->residence }}</p>
                                     </div>
                                     <div class="media">
                                         <label>Address</label>
-                                        <p>California, USA</p>
+                                        <p>{{ $proName->address }}</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="media">
                                         <label>E-mail</label>
-                                        <p>info@domain.com</p>
+                                        <p>{{ $proName->email }}</p>
                                     </div>
                                     <div class="media">
                                         <label>Phone</label>
-                                        <p>820-885-3321</p>
+                                        <p>{{ $proName->phone }}</p>
                                     </div>
                                     <div class="media">
                                         <label>Skype</label>
-                                        <p>skype.0404</p>
+                                        <p>{{ $proName->skype}}</p>
                                     </div>
                                     <div class="media">
                                         <label>Freelance</label>
-                                        <p>Available</p>
+                                        <p>{{ $FS}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -533,66 +543,39 @@
                     </div>
                 </div>
                 <div class="row">
+                    
+                     @php
+                    $blogs = App\Models\Blog::orderBy('created_at', 'desc')->get();
+                    
+                        $count=0;
+                    @endphp
+                        <!-- Table rows with data -->
+                        @foreach( $blogs as $blog)
+                        @php
+                    
+                        $count++;
+                        @endphp
                     <div class="col-lg-4 m-15px-tb">
                         <div class="blog-grid">
                             <div class="blog-grid-img">
-                                <a href="#">
-                                    <img src="static/img/blog-1.jpg" title="" alt="">
+                                <a  href="{{ $blog->blog_link }}" target="_blank">
+                                    <img src="{{ asset('uploads/'. $blog->blog_image) }}" title="" alt="">
                                 </a>
                             </div>
                             <div class="blog-gird-info">
                                 <div class="b-meta">
-                                    <span class="date">02 Mar</span>
-                                    <span class="meta">Design</span>
+                                    <span class="date">{{ $blog->created_at }}</span>
+                                    
                                 </div>
-                                <h5><a href="#">Make your Marketing website</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <h5><a  href="{{ $blog->blog_link }}" target="_blank">{{ $blog->blog_title }}</a></h5>
+                                
                                 <div class="btn-grid">
-                                    <a class="m-btn-link" href="#">Read More</a>
+                                    <a class="m-btn-link" href="{{ $blog->blog_link }}" target="_blank">Read More</a>
                                 </div>
                             </div>
                         </div>
                     </div> <!-- col -->
-                    <div class="col-lg-4 m-15px-tb">
-                        <div class="blog-grid">
-                            <div class="blog-grid-img">
-                                <a href="#">
-                                    <img src="static/img/blog-2.jpg" title="" alt="">
-                                </a>
-                            </div>
-                            <div class="blog-gird-info">
-                                <div class="b-meta">
-                                    <span class="date">02 Mar 2019</span>
-                                    <span class="meta">Design</span>
-                                </div>
-                                <h5><a href="#">Make your Marketing website</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <div class="btn-grid">
-                                    <a class="m-btn-link" href="#">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- col -->
-                    <div class="col-lg-4 m-15px-tb">
-                        <div class="blog-grid">
-                            <div class="blog-grid-img">
-                                <a href="#">
-                                    <img src="static/img/blog-3.jpg" title="" alt="">
-                                </a>
-                            </div>
-                            <div class="blog-gird-info">
-                                <div class="b-meta">
-                                    <span class="date">02 Mar 2019</span>
-                                    <span class="meta">Design</span>
-                                </div>
-                                <h5><a href="#">Make your Marketing website</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <div class="btn-grid">
-                                    <a class="m-btn-link" href="#">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- col -->
+                    @endforeach
                 </div>
             </div>
         </section>
@@ -656,7 +639,7 @@
                             </div>
                             <div class="media-body">
                                 <h6 class="dark-color font-alt">Our Address</h6>
-                                <p>123 Stree New York City , United States Of America 750065.</p>
+                                <p>{{$proName->address}}</p>
                             </div>
                         </div>
                         <div class="contact-info media box-shadow">
@@ -665,8 +648,8 @@
                             </div>
                             <div class="media-body">
                                 <h6 class="dark-color font-alt">Our Phone</h6>
-                                <p>Office: +004 44444 44444<br>
-                                    Office: +004 44444 44444<br></p>
+                                <p>Personal: {{$proName->phone}}<br>
+                                    Office: {{$proName->office_phone}}<br></p>
                             </div>
                         </div>
                         <div class="contact-info media box-shadow">
@@ -675,7 +658,7 @@
                             </div>
                             <div class="media-body">
                                 <h6 class="dark-color font-alt">Our Email</h6>
-                                <p>info@domainname.com<br>contact@domainname.com</p>
+                                <p>{{$proName->email}}<br>{{$proName->office_email}}</p>
                             </div>
                         </div>
                     </div>
