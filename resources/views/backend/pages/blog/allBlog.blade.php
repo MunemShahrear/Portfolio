@@ -6,8 +6,18 @@
 <div class="container card">
 <div class="content-container p-4 ">
       <h3 class=" text-center">All Blog's</h3><br>
-    <input type="text" id="searchInput" class="form-control mb-3" placeholder="Search...">
+    <input type="text" id="searchInput" class="form-control mb-3" placeholder="Search by title...">
+    @if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
 
+@if (session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+@endif
     <!-- Table -->
     <table class="table table-striped">
       <thead>
@@ -37,8 +47,12 @@
           <td> {{ $blog->blog_title }}</td>
           <td> {{ $blog->created_at }}</td>
           <td>
-            <button class="btn btn-primary btn-sm">Edit</button>
-            <button class="btn btn-danger btn-sm">Delete</button>
+         
+          <a href="{{ route('edit.blog',$blog->id) }}">
+              <button class="btn btn-primary btn-sm">Edit</button>
+          </a>
+         
+            <a href="{{ route('blog.destroy',$blog->id) }} "><button class="btn btn-danger btn-sm">Delete</button></a>
           </td>
         </tr>
         @endforeach

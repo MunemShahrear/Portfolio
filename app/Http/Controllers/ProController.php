@@ -32,7 +32,7 @@ class ProController extends Controller
         $profile->save();
     
         // Redirect to the create profile page or any other page as needed
-        return redirect()->route('create.profile');
+        return redirect()->route('edit.profile');
     }
             public function updatep(Request $request)
         {

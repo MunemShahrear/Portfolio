@@ -18,7 +18,7 @@
             <li class="dropdown">
                   <a class="nav-link menu-title" href="javascript:void(0)">
                       <i class="fa fa-newspaper-o"></i>
-                      <span style="margin-left: 5px;">Blog</span>
+                      <span style="margin-left: 5px;">Manage Blog</span>
                   </a>
 
                   <ul class="nav-submenu menu-content">
@@ -33,11 +33,11 @@
             <li class="dropdown">
                   <a class="nav-link menu-title" href="javascript:void(0)">
                       <i class="fa fa-user"></i>
-                      <span style="margin-left: 5px;">Profile</span>
+                      <span style="margin-left: 5px;">Manage Profile</span>
                   </a>
 
                   <ul class="nav-submenu menu-content">
-                    <li><a href="{{route('create.profile')}}"><i class="fa fa-edit"></i>Edit profile</a></li>
+                    <li><a href="{{route('edit.profile')}}"><i class="fa fa-edit"></i>Edit profile</a></li>
                  
                   </ul>
 
@@ -47,13 +47,13 @@
              <!-- Banner Area Start-->
             <li class="dropdown">
                   <a class="nav-link menu-title" href="javascript:void(0)">
-                      <i class="fa fa-clipboard"></i>
-                      <span style="margin-left: 5px;">Banner</span>
+                      <i class="fa fa-cog"></i>
+                      <span style="margin-left: 5px;">Manage Website</span>
                   </a>
 
                   <ul class="nav-submenu menu-content">
-                  
-                    <li><a href="{{route('all.blog')}}"><i class="fa fa-edit"></i>Edit profile</a></li>
+                  <li><a href="{{route('manage.image')}}"><i class="fa fa-file-image-o"></i> Change Image </a></li>
+                    <li><a href="{{route('manage.content')}}"><i class="fa fa-file-text-o"></i> Change Content</a></li>
                   </ul>
 
             </li>

@@ -692,7 +692,7 @@
     <!-- jquery -->
   
     
-   @include('frontend.include.script');
+   @include('frontend.include.script')
     <!-- end -->
     <!-- end body -->
 </body>

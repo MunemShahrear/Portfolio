@@ -31,17 +31,17 @@
             @csrf
             <div class="form-group">
                 <label for="name">First Name:</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder=" {{ $proName->name }}" >
+                <input type="text" class="form-control" id="name" name="name" Value=" {{ $proName->name }}" >
             </div>
             <div class="form-group">
-                <label for="lastname">First Name:</label>
-                <input type="text" class="form-control" id="lastname" name="lastname" placeholder=" {{ $proName->lastname }}" >
+                <label for="lastname">Last Name:</label>
+                <input type="text" class="form-control" id="lastname" name="lastname" Value=" {{ $proName->lastname }}" >
             </div>
     
         
             <div class="form-group">
                 <label for="designation">Designation:</label>
-                <input type="text" class="form-control" id="designation" name="designation" placeholder=" {{ $proName->designation }}" >
+                <input type="text" class="form-control" id="designation" name="designation" Value=" {{ $proName->designation }}" >
             </div>
 
             <div class="form-group">
@@ -51,7 +51,7 @@
 
             <div class="form-group">
                 <label for="residence">Residence:</label>
-                <input type="text" class="form-control" id="residence" name="residence" placeholder=" {{ $proName->residence }}" >
+                <input type="text" class="form-control" id="residence" name="residence" Value=" {{ $proName->residence }}" >
             </div>
 
             <div class="form-group">
@@ -61,27 +61,27 @@
 
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder=" {{ $proName->email }}" >
+                <input type="email" class="form-control" id="email" name="email" Value=" {{ $proName->email }}" >
             </div>
 
             <div class="form-group">
                 <label for="officeEmail">Office Email:</label>
-                <input type="email" class="form-control" id="officeEmail" name="office_email" placeholder=" {{ $proName->office_email }}" >
+                <input type="email" class="form-control" id="officeEmail" name="office_email" Value=" {{ $proName->office_email }}" >
             </div>
 
             <div class="form-group">
                 <label for="phone">Phone:</label>
-                <input type="tel" class="form-control" id="phone" name="phone" placeholder=" {{ $proName->phone }}" >
+                <input type="tel" class="form-control" id="phone" name="phone" Value=" {{ $proName->phone }}" >
             </div>
 
             <div class="form-group">
                 <label for="officePhone">Office Phone:</label>
-                <input type="tel" class="form-control" id="officePhone" name="office_phone" placeholder=" {{ $proName->office_phone }}" >
+                <input type="tel" class="form-control" id="officePhone" name="office_phone" Value=" {{ $proName->office_phone }}" >
             </div>
 
             <div class="form-group">
                 <label for="skype">Skype:</label>
-                <input type="text" class="form-control" id="skype" name="skype" placeholder=" {{ $proName->skype }}" >
+                <input type="text" class="form-control" id="skype" name="skype" Value=" {{ $proName->skype }}" >
             </div>
 
             
