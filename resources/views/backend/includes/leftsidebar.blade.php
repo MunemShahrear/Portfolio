@@ -52,7 +52,6 @@
                   </a>
 
                   <ul class="nav-submenu menu-content">
-                  <li><a href="{{route('manage.image')}}"><i class="fa fa-file-image-o"></i> Change Image </a></li>
                     <li><a href="{{route('manage.content')}}"><i class="fa fa-file-text-o"></i> Change Content</a></li>
                   </ul>
 

@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProController;
+use App\Http\Controllers\ContentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -60,30 +61,20 @@ Route::get('/dashboard', function () {
 //Profile route end
 
 
-//Image route Start
-
-                Route::get('/manage/image', function () {
-                    return view('backend.pages.website.manageImage');
-                    })->name('manage.image');
-                    Route::post('/store/image', [ImgController::class, 'store'])->name('image.store');
-
-                    Route::post('/image/update', [ImgController::class, 'update'])->name('image.update');
-
-
-
-//image route end
-
 
 //Content route Start
                     Route::get('/manage/content', function () {
                 return view('backend.pages.website.manageContent');
                 })->name('manage.content');
-                Route::post('/store/content', [ContentController::class, 'store'])->name('content.store');
-
-                Route::post('/content/update', [ContentController::class, 'update'])->name('content.update');
+                Route::post('/content/update', [ContentController::class, 'updatec'])->name('content.updatec');
 
 //Content route End
 
+
+//Content route Start
+Route::get('/manage/admin', function () {
+    return view('backend.pages.admin.manageAdmin');
+    })->name('manage.admin');
 //Login Profile route Start
 
 

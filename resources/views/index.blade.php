@@ -8,13 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="Sajal">
     <meta name="description" content="Sajal">
-    @php 
+            @php 
                 $proName = App\Models\Profile::first();
                 
                 if($proName->freelance_status==1){
                 $FS='Available';}
                 else{
                 $FS='Busy';}
+              @endphp
+
+              @php 
+                $content = App\Models\Content::first();
+            
               @endphp
     <!-- title -->
     <title>
@@ -68,18 +73,20 @@
                 <div class="row full-screen align-items-center p-100px-tb">
                     <div class="col-md-6">
                         <div class="ht-text">
-                            <h6>Hello there...</h6>
+                            <h6>  {{ $content->greetings }}</h6>
                             <h1>{{ $proName->name }} {{ $proName->lastname}}</h1>
                             <h2>{{ $proName->designation }}<span id="type-it"></span></h2>
-                            <p>Step into my digital realm where technology's symphony harmonizes with the art of storytelling. </p>
-                            <div class="btn-bar go-to">
+                          <!--  <p>Step into my digital realm where technology's symphony harmonizes with the art of storytelling. </p>
+                -->
+                    <p> {{ $content->intro }}</p>
+                <div class="btn-bar go-to">
                                 <a class="m-btn m-btn-theme" href="#work">my work</a>
                                 <a class="m-btn m-btn-t-theme" href="#contactus">Hire Me</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <img src="{{asset('image/header_img.png')}}" title="" alt="">
+                        <img src="{{ asset('uploads/'. $content->pro_image) }}" title="" alt="Pro Image">
                     </div>
                 </div>
             </div>
@@ -104,7 +111,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-5 m-15px-tb">
                         <div class="about-me-img box-shadow">
-                            <img src="{{asset('image/pro_img.jpg')}}" title="" alt="">
+                            <img src="{{ asset('uploads/'. $content->about_image) }}" title="" alt="About Image">
                             <div class="nav social-icon">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -117,8 +124,11 @@
                         <div class="about-me">
                             <h4>I'M {{ $proName->name }} {{ $proName->lastname}}</h4>
                             <h6>{{ $proName->designation }}</span></h6>
-                            <p>blending my educational background in BBA with my unwavering passion for new technology and gaming.</p>
-                            <div class="row about-list">
+                          <!--  <p>blending my educational background in BBA with my unwavering passion for new technology and gaming.</p>
+                --> 
+                        <p> {{ $content->about_intro}}</p>
+                          
+                          <div class="row about-list">
                                 <div class="col-md-6">
                                     <div class="media">
                                         <label>Birthday</label>

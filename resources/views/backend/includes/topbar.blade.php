@@ -2,15 +2,19 @@
 <div class="page-main-header">
     <div class="main-header-right row m-0">
       <div class="main-header-left">
-        <div class="logo-wrapper"><a href="">
-          <h4>
+        <div class="logo-wrapper"><a href="{{route('dashboard')}}">
+          
+        <h4>
               @php 
                 $proName = App\Models\Profile::first();
+              @endphp
+              @php 
+                $content = App\Models\Content::first();
               @endphp
               {{ $proName->name }}
           </h4>
         </a></div>
-        <div class="dark-logo-wrapper "><a href=""><h4>{{ $proName->name }}</h4></a></div>
+        <div class="dark-logo-wrapper "><a href="{{route('dashboard')}}"><h4>{{ $proName->name }}</h4></a></div>
         <div class="toggle-sidebar"><i class="status_toggle middle" data-feather="align-center" id="sidebar-toggle"></i></div>
       </div>
       <div class="left-menu-header col">
@@ -28,7 +32,7 @@
           </li>
           <li class="onhover-dropdown">
             <div class="bookmark-box">
-                <img class="img-30 rounded-circle" src="{{ asset('backend/assets/images/dashboard/1.png') }}" alt="">
+                <img class="img-30 rounded-circle"  src="{{ asset('uploads/'. $content->about_image) }}" alt="P">
             </div>
             <div class="bookmark-dropdown onhover-show-div">
               {{-- <div class="form-group mb-0">
@@ -43,15 +47,15 @@
                 <li class="add-to-bookmark"><i class="bookmark-icon" data-feather="command"></i>Feather Icon<span class="pull-right"><i data-feather="star"></i></span></li>
                 <li class="add-to-bookmark"><i class="bookmark-icon" data-feather="airplay"></i>Widgets<span class="pull-right"><i data-feather="star">   </i></span></li>
               </ul> --}}
-              <div class="sidebar-user text-center"><a class="setting-primary" href="javascript:void(0)"><i data-feather="settings"></i></a><img class="img-90 rounded-circle" src="{{ asset('backend/assets/images/dashboard/1.png') }}" alt="">
+              <div class="sidebar-user text-center"><a class="setting-primary" href="{{route('manage.admin')}}"><i data-feather="settings"></i></a><img class="img-90 rounded-circle" src="{{ asset('uploads/'. $content->about_image) }}" alt="Abt">
                 <div class="badge-bottom">
                 {{-- <span class="badge badge-primary">New</span> --}}
                 </div>
-                <a href="user-profile.html">
-                <h6 class="mt-3 f-14 f-w-600">Tanvir Sarrick</h6>
+                <a href="#">
+                <h6 class="mt-3 f-14 f-w-600">{{ $proName->name }} {{ $proName->lastname }}</h6>
                 </a>
-              <p class="mb-0 font-roboto">Admin</p>
-              {{-- <ul>
+              <p class="mb-0 font-roboto">Super Admin</p>
+              <!-- {{-- <ul>
                 <li><span><span class="counter">19.8</span>k</span>
                   <p>Follow</p>
                 </li>
@@ -61,7 +65,7 @@
                 <li><span><span class="counter">95.2</span>k</span>
                   <p>Follower </p>
                 </li>
-              </ul> --}}
+              </ul> --}} -->
             </div>
             </div>
           </li>

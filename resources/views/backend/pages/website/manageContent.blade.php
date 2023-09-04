@@ -5,7 +5,7 @@
 @section('body-content')
 
 @php 
-                $proName = App\Models\Profile::first();
+                $content = App\Models\Content::first();
             
               @endphp
 
@@ -26,74 +26,36 @@
 @endif
 <div class="container card">
     <div class="content-container p-4">
-        <h3 class="text-center">Edit Profile</h3><br>
-        <form action="{{ route('profile.updatep')}}" method="post" enctype="multipart/form-data">
+        <h3 class="text-center">Edit Content</h3><br>
+        <form action="{{ route('content.updatec')}}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
-                <label for="name">First Name:</label>
-                <input type="text" class="form-control" id="name" name="name" Value=" {{ $proName->name }}" >
+                <label for="greetings">Greeting note</label>
+                <input type="text" class="form-control" id="greetings" name="greetings" Value=" {{ $content->greetings }}" >
             </div>
             <div class="form-group">
-                <label for="lastname">Last Name:</label>
-                <input type="text" class="form-control" id="lastname" name="lastname" Value=" {{ $proName->lastname }}" >
+                <label for="intro">Intro</label>
+                <input type="text" class="form-control" id="intro" name="intro" Value=" {{ $content->intro }}" >
             </div>
+                <div class="form-group">
+                    <label for="pro_image">Top Image:</label><br>
+                    <td><img src="{{ asset('uploads/'. $content->pro_image) }}" alt="Pro Image" width="250"></td><br><br>           
+                    <input type="file" class="form-control-file" id="pro_image" name="pro_image" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="about_image">About Image:</label><br>
+                    <td><img src="{{ asset('uploads/'. $content->about_image) }}" alt="About Image" width="250"></td><br><br>           
+                    <input type="file" class="form-control-file" id="about_image" name="about_image" accept="image/*">
+                </div>
     
         
             <div class="form-group">
-                <label for="designation">Designation:</label>
-                <input type="text" class="form-control" id="designation" name="designation" Value=" {{ $proName->designation }}" >
+                <label for="about_intro">About intro:</label>
+                <input type="text" class="form-control" id="about_intro" name="about_intro" Value=" {{ $content->about_intro }}" >
             </div>
 
-            <div class="form-group">
-                <label for="birthday">Birthday:</label>
-                <input type="date" class="form-control" id="birthday" name="birthday" >
-            </div>
-
-            <div class="form-group">
-                <label for="residence">Residence:</label>
-                <input type="text" class="form-control" id="residence" name="residence" Value=" {{ $proName->residence }}" >
-            </div>
-
-            <div class="form-group">
-                <label for="address">Address:</label>
-                <textarea class="form-control" id="address" name="address" placeholder=" {{ $proName->address }}" ></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" name="email" Value=" {{ $proName->email }}" >
-            </div>
-
-            <div class="form-group">
-                <label for="officeEmail">Office Email:</label>
-                <input type="email" class="form-control" id="officeEmail" name="office_email" Value=" {{ $proName->office_email }}" >
-            </div>
-
-            <div class="form-group">
-                <label for="phone">Phone:</label>
-                <input type="tel" class="form-control" id="phone" name="phone" Value=" {{ $proName->phone }}" >
-            </div>
-
-            <div class="form-group">
-                <label for="officePhone">Office Phone:</label>
-                <input type="tel" class="form-control" id="officePhone" name="office_phone" Value=" {{ $proName->office_phone }}" >
-            </div>
-
-            <div class="form-group">
-                <label for="skype">Skype:</label>
-                <input type="text" class="form-control" id="skype" name="skype" Value=" {{ $proName->skype }}" >
-            </div>
-
-            
-            <div class="form-check form-switch">
-                <label for="flexSwitchCheckChecked">Freelance Status:</label> 
-                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" name="freelance_status"  value="1"
-                 @if($proName->freelance_status == 1)
-                     checked
-                 @endif
-                        ><br>
-                    </div>
-            
+          
 
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
