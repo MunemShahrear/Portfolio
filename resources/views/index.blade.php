@@ -41,7 +41,7 @@
         <nav class="navbar header-nav header-dark navbar-expand-lg">
             <div class="container">
                 <!-- Brand -->
-                <a class="navbar-brand" href="index.html">  {{ $proName->name }}<span class="theme-bg"></span></a>
+                <a class="navbar-brand" href="{{route('home')}}">  {{ $proName->name }}<span class="theme-bg"></span></a>
                 <!-- / -->
                 <!-- Mobile Toggle -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-toggle" aria-controls="navbar-collapse-toggle" aria-expanded="false" aria-label="Toggle navigation">
