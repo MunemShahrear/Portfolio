@@ -71,10 +71,10 @@ class BlogController extends Controller
            return redirect()->route('all.blog')->with('success', 'Blog updated successfully.');
         }
 
-        public function destroy($id)
+        public function destroy(Request $request, $id)
             {
                 $item = blog::find($id);
-
+                //dd($item);
                 if (!$item) {
                     // Handle the case where the item is not found
                     return redirect()->route('all.blog')->with('error', 'Item not found.');

@@ -52,7 +52,12 @@
               <button class="btn btn-primary btn-sm">Edit</button>
           </a>
          
-            <a href="{{ route('blog.destroy',$blog->id) }} "><button class="btn btn-danger btn-sm">Delete</button></a>
+          <form method="post" action="{{ route('blog.destroy',$blog->id) }}">
+            @csrf
+            <input type="hidden" name="id" value="{{ $blog->id }}">
+            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+          </form>  
+          
           </td>
         </tr>
         @endforeach

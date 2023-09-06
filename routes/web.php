@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProController;
 use App\Http\Controllers\ContentController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,7 +41,7 @@ Route::get('/dashboard', function () {
 
             Route::post('/blog/update/{id}', [BlogController::class, 'updateb'])->name('blog.updateb');
 
-            Route::delete('/blog/{id}', [BlogController::class,'destroy'])->name('blog.destroy');
+            Route::post('/blog/{id}', [BlogController::class,'destroy'])->name('blog.destroy');
 
         
 
@@ -81,8 +82,9 @@ Route::get('/manage/admin', function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    //Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::post('/admin/update', [ProfileController::class, 'update'])->name('profile.update');
 });
 
 require __DIR__.'/auth.php';

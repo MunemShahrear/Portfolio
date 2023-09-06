@@ -27,12 +27,14 @@
 <div class="container card">
     <div class="content-container p-4">
         <h3 class="text-center">Change Admin Password</h3><br>
-        <form action="{{ route('profile.updatep')}}" method="post" enctype="multipart/form-data">
-            @csrf
-            <div class="form-group">
-                <label for="Admin">Admin Image</label>
-                <input type="text" class="form-control" id="name" name="name" Value=" " >
+        @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
             </div>
+        @endif
+        <form action="{{ route('profile.update')}}" method="post" enctype="multipart/form-data">
+            @csrf
+            
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" class="form-control" id="email" name="email" Value=" {{ $admin->email }}" >
@@ -40,8 +42,8 @@
     
         
             <div class="form-group">
-                <label for="Password">Change Password:</label>
-                <input type="password" class="form-control" id="password" name="password" Value=" {{ $admin->password }}" >
+                <label for="password">Change Password:</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter New Password" >
             </div>
 
           
