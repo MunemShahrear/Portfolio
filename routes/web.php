@@ -5,14 +5,19 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProController;
 use App\Http\Controllers\ContentController;
-
+use App\Http\Controllers\CategoryController;
 
 
 
 Route::get('/', function () {
     return view('index');
-})->name('home');;
-Route::middleware('auth')->group(function () {
+})->name('home');
+Route::get('/blogs', function () {
+    return view('frontend.pages.webBlog');
+})->name('web.blog');
+
+
+// Route::middleware('auth')->group(function () {
    
 
 
@@ -25,6 +30,9 @@ Route::get('/dashboard', function () {
                 return view('backend.pages.blog.allBlog');
             })->name('all.blog');
 
+            Route::get('/create/category', function () {
+                return view('backend.pages.blog.createCategory');
+             })->name('create.category');
             Route::get('/create/blog', function () {
                 return view('backend.pages.blog.createBlog');
              })->name('create.blog');
@@ -34,15 +42,18 @@ Route::get('/dashboard', function () {
             })->name('edit.blog');
 
             Route::post('/store/blog', [BlogController::class, 'store'])->name('blog.store');
-
             Route::post('/blog/update/{id}', [BlogController::class, 'updateb'])->name('blog.updateb');
-
             Route::post('/blog/{id}', [BlogController::class,'destroy'])->name('blog.destroy');
 
         
 
 //blog route end
 
+//Category route Start
+Route::post('/create/category', [CategoryController::class, 'category'])->name('blog.category');
+Route::post('/category/{id}', [CategoryController::class,'destroy'])->name('category.destroy');
+
+//Category route End
 
 //Profile route Start
 
@@ -75,15 +86,15 @@ Route::get('/manage/admin', function () {
     })->name('manage.admin');
 //Login Profile route Start
 
-});
+// });
 
 
-Route::middleware('auth')->group(function () {
+
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     //Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::post('/admin/update', [ProfileController::class, 'update'])->name('profile.update');
     Route::post('/logout', [ProfileController::class, 'destroy'])->name('logout');
-});
+// });
 
 require __DIR__.'/auth.php';

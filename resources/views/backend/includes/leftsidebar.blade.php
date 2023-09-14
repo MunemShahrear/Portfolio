@@ -22,6 +22,7 @@
                   </a>
 
                   <ul class="nav-submenu menu-content">
+                  <li><a href="{{route('create.category')}}"><i class="fa fa-plus"></i> Add Category</a></li>
                     <li><a href="{{route('create.blog')}}"><i class="fa fa-pencil"></i> Write Blog</a></li>
                     <li><a href="{{route('all.blog')}}"><i class="fa fa-list"></i> All Blog's</a></li>
                   </ul>

@@ -57,7 +57,7 @@
                         <li><a class="nav-link" href="#about">About Us</a></li>
                         <li><a class="nav-link" href="#services">services</a></li>
                         <li><a class="nav-link" href="#work">Portfolio</a></li>
-                        <li><a class="nav-link" href="#blog">Blog</a></li>
+                        <li><a class="nav-link" href="{{route('web.blog')}}">Blog</a></li>
                         <li><a class="nav-link" href="#contactus">Contact</a></li>
                     </ul>
                 </div>
@@ -182,7 +182,7 @@
                     <div class="col-md-12">
                         <div class="section-title">
                             <h3 class="dark-color text-uppercase">My Skills</h3>
-                            <p class="text-uppercase small">A Lead Content Wrtiter based in Bangladesh</p>
+                            
                         </div>
                     </div>
                 </div>
@@ -190,7 +190,7 @@
                     <div class="col-lg-6 m-15px-tb">
                         <!-- skill -->
                         <div class="skill-lt">
-                            <h6 class="dark-color">HTML5</h6>
+                            <h6 class="dark-color">Understanding of Branding</h6>
                             <div class="skill-bar">
                                 <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
                                     <span>92%</span>
@@ -200,17 +200,17 @@
                         <!-- end skill -->
                         <!-- skill -->
                         <div class="skill-lt">
-                            <h6 class="dark-color">WordPress</h6>
+                            <h6 class="dark-color">On Page SEO</h6>
                             <div class="skill-bar">
-                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">
-                                    <span>75%</span>
+                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                                    <span>95%</span>
                                 </div>
                             </div>
                         </div>
                         <!-- end skill -->
                         <!-- skill -->
                         <div class="skill-lt">
-                            <h6 class="dark-color">Magento</h6>
+                            <h6 class="dark-color">Emotional Intelligence</h6>
                             <div class="skill-bar">
                                 <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100">
                                     <span>86%</span>
@@ -220,10 +220,18 @@
                         <!-- end skill -->
                         <!-- skill -->
                         <div class="skill-lt">
-                            <h6 class="dark-color">UI/UX</h6>
+                            <h6 class="dark-color">Audience Understanding</h6>
                             <div class="skill-bar">
                                 <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
                                     <span>88%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-lt">
+                            <h6 class="dark-color">Marketing</h6>
+                            <div class="skill-bar">
+                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100">
+                                    <span>93%</span>
                                 </div>
                             </div>
                         </div>
@@ -234,10 +242,10 @@
                             <div class="col-6 m-15px-tb">
                                 <div class="feature-box-2 media align-items-center">
                                     <div class="icon">
-                                        <i class="fas fa-compact-disc"></i>
+                                        <i class="fas fa-pen-alt"></i>
                                     </div>
                                     <div class="media-body">
-                                        <h5>80 Albumes Listened</h5>
+                                        <h5>500+ published article</h5>
                                     </div>
                                 </div>
                             </div>
@@ -247,27 +255,27 @@
                                         <i class="fas fa-trophy"></i>
                                     </div>
                                     <div class="media-body">
-                                        <h5>15 Awards Won</h5>
+                                        <h5>Awarded as exceptional writer</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-6 m-15px-tb">
                                 <div class="feature-box-2 media align-items-center">
                                     <div class="icon">
-                                        <i class="fas fa-mug-hot"></i>
+                                        <i class="fas fa-funnel-dollar"></i>
                                     </div>
                                     <div class="media-body">
-                                        <h5>1 000 Cups of coffee</h5>
+                                        <h5>Expert in multiple niche</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-6 m-15px-tb">
                                 <div class="feature-box-2 media align-items-center">
                                     <div class="icon">
-                                        <i class="fas fa-flag"></i>
+                                        <i class="fas fa-traffic-light"></i>
                                     </div>
                                     <div class="media-body">
-                                        <h5>10 Countries Visited</h5>
+                                        <h5>High-Traffic generator</h5>
                                     </div>
                                 </div>
                             </div>
@@ -284,7 +292,7 @@
                     <div class="col-md-12">
                         <div class="section-title">
                             <h3 class="dark-color text-uppercase">My Services</h3>
-                            <p class="text-uppercase small">A Lead Content Writer based in Bangladesh</p>
+                            <p class="text-uppercase small">Checkout my awesome services to enhance your business</p>
                         </div>
                     </div>
                 </div>
@@ -293,11 +301,26 @@
                     <div class="col-sm-6 col-lg-4 m-15px-tb">
                         <div class="feature-box-1 box-shadow-lg">
                             <div class="icon">
-                                <i class="icon-desktop"></i>
+                                <i class="icon-search"></i>
                             </div>
                             <div class="feature-content">
-                                <h5>Unique design</h5>
-                                <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+                                <h5>SEO-friendly content development</h5>
+                                <p>
+                                Drive traffic and engagement with our expertly crafted content.
+
+                                </p></div>
+                        </div>
+                    </div>
+                    <!-- / -->
+                    <!-- feaure box -->
+                    <div class="col-sm-6 col-lg-4 m-15px-tb">
+                        <div class="feature-box-1 box-shadow-lg">
+                            <div class="icon">
+                                <i class="icon-notebook"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h5>Script wiring</h5>
+                            <p>Craft compelling narratives that captivate your audience.</p>
                             </div>
                         </div>
                     </div>
@@ -306,11 +329,11 @@
                     <div class="col-sm-6 col-lg-4 m-15px-tb">
                         <div class="feature-box-1 box-shadow-lg">
                             <div class="icon">
-                                <i class="icon-pricetags"></i>
+                                <i class="icon-strategy"></i>
                             </div>
                             <div class="feature-content">
-                                <h5>Different Layout</h5>
-                                <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+                                <h5>All in one branding solution</h5>
+                                <p>Elevate your brand identity with a holistic approach to branding.</p>
                             </div>
                         </div>
                     </div>
@@ -319,11 +342,11 @@
                     <div class="col-sm-6 col-lg-4 m-15px-tb">
                         <div class="feature-box-1 box-shadow-lg">
                             <div class="icon">
-                                <i class="icon-chat"></i>
+                                <i class="icon-camera"></i>
                             </div>
                             <div class="feature-content">
-                                <h5>Make it Simple</h5>
-                                <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+                                <h5>Instagram management</h5>
+                                <p>Maximize your Instagram potential with our strategic management.</p>
                             </div>
                         </div>
                     </div>
@@ -332,11 +355,11 @@
                     <div class="col-sm-6 col-lg-4 m-15px-tb">
                         <div class="feature-box-1 box-shadow-lg">
                             <div class="icon">
-                                <i class="icon-mobile"></i>
+                                <i class="icon-facebook"></i>
                             </div>
                             <div class="feature-content">
-                                <h5>Responsiveness</h5>
-                                <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+                                <h5>Social media marketing</h5>
+                                <p>Amplify your reach and engagement with targeted social media strategies.</p>
                             </div>
                         </div>
                     </div>
@@ -348,21 +371,8 @@
                                 <i class="icon-target"></i>
                             </div>
                             <div class="feature-content">
-                                <h5>Testing for Perfection</h5>
-                                <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / -->
-                    <!-- feaure box -->
-                    <div class="col-sm-6 col-lg-4 m-15px-tb">
-                        <div class="feature-box-1 box-shadow-lg">
-                            <div class="icon">
-                                <i class="icon-tools-2"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h5>Advanced Options</h5>
-                                <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+                                <h5>Organic traffic generation</h5>
+                                <p>Boost your online visibility and draw in your target audience naturally.</p>
                             </div>
                         </div>
                     </div>
@@ -374,197 +384,25 @@
         <!-- Work -->
         <section id="work" class="section">
             <div class="container">
-                <div class="row sm-m-25px-b m-35px-b">
+            <div class="row sm-m-25px-b m-35px-b">
                     <div class="col-md-12">
                         <div class="section-title">
-                            <h3 class="dark-color text-uppercase">LATEST WORKS</h3>
-                            <p class="text-uppercase small">A Lead Content Writer based in Bangladesh</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="portfolio-content lightbox-gallery">
-                    <div class="grid-item product branding">
-                        <div class="portfolio-box-01">
-                            <div class="portfolio-img">
-                                <img src="static/img/portfolio-1.jpg" title="" alt="">
-                            </div>
-                            <div class="portfolio-info">
-                                <h5>Our Photography</h5>
-                                <span>Design</span>
-                            </div>
-                            <a class="link-overlay" href="#"></a>
-                        </div>
-                    </div> <!-- grid item -->
-                    <div class="grid-item product branding">
-                        <div class="portfolio-box-01">
-                            <div class="portfolio-img">
-                                <img src="static/img/portfolio-6.jpg" title="" alt="">
-                            </div>
-                            <div class="portfolio-info">
-                                <h5>Our Photography</h5>
-                                <span>Design</span>
-                            </div>
-                            <a class="link-overlay" href="#"></a>
-                        </div>
-                    </div> <!-- grid item -->
-                    <div class="grid-item product branding">
-                        <div class="portfolio-box-01">
-                            <div class="portfolio-img">
-                                <img src="static/img/portfolio-2.jpg" title="" alt="">
-                            </div>
-                            <div class="portfolio-info">
-                                <h5>Our Photography</h5>
-                                <span>Design</span>
-                            </div>
-                            <a class="link-overlay" href="#"></a>
-                        </div>
-                    </div> <!-- grid item -->
-                    <div class="grid-item product branding">
-                        <div class="portfolio-box-01">
-                            <div class="portfolio-img">
-                                <img src="static/img/portfolio-3.jpg" title="" alt="">
-                            </div>
-                            <div class="portfolio-info">
-                                <h5>Our Photography</h5>
-                                <span>Design</span>
-                            </div>
-                            <a class="link-overlay" href="#"></a>
-                        </div>
-                    </div> <!-- grid item -->
-                    <div class="grid-item product branding">
-                        <div class="portfolio-box-01">
-                            <div class="portfolio-img">
-                                <img src="static/img/portfolio-4.jpg" title="" alt="">
-                            </div>
-                            <div class="portfolio-info">
-                                <h5>Our Photography</h5>
-                                <span>Design</span>
-                            </div>
-                            <a class="link-overlay" href="#"></a>
-                        </div>
-                    </div> <!-- grid item -->
-                    <div class="grid-item product branding">
-                        <div class="portfolio-box-01">
-                            <div class="portfolio-img">
-                                <img src="static/img/portfolio-5.jpg" title="" alt="">
-                            </div>
-                            <div class="portfolio-info">
-                                <h5>Our Photography</h5>
-                                <span>Design</span>
-                            </div>
-                            <a class="link-overlay" href="#"></a>
-                        </div>
-                    </div> <!-- grid item -->
-                </div> <!-- portfolio-content -->
-            </div>
-        </section>
-        <!-- End work -->
-        <!-- Testiminails -->
-        <section class="section gray-bg">
-            <div class="container">
-                <div class="row sm-m-25px-b m-35px-b">
-                    <div class="col-md-12">
-                        <div class="section-title">
-                            <h3 class="dark-color text-uppercase">Testimonials</h3>
-                            <p class="text-uppercase small">A Lead Content Writer based in Bangladesh</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-carousel" data-items="2" data-nav-dots="true" data-md-items="2" data-sm-items="1" data-xs-items="1" data-xx-items="1" data-space="30">
-                    <!-- testimonials -->
-                    <div class="testimonial-col-01">
-                        <div class="media">
-                            <div class="img">
-                                <img src="static/img/team-1.jpg" title="" alt="">
-                            </div>
-                            <div class="media-body p-25px-l">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                                <div class="tc-info">
-                                    <h6 class="font-alt dark-color font-w-600">Nancy Bayers</h6>
-                                    <span>Co-founder</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / -->
-                    <!-- testimonials -->
-                    <div class="testimonial-col-01">
-                        <div class="media">
-                            <div class="img">
-                                <img src="static/img/team-2.jpg" title="" alt="">
-                            </div>
-                            <div class="media-body p-25px-l">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                                <div class="tc-info">
-                                    <h6 class="font-alt dark-color font-w-600">Nancy Bayers</h6>
-                                    <span>Co-founder</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / -->
-                    <!-- testimonials -->
-                    <div class="testimonial-col-01">
-                        <div class="media">
-                            <div class="img">
-                                <img src="static/img/team-3.jpg" title="" alt="">
-                            </div>
-                            <div class="media-body p-25px-l">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                                <div class="tc-info">
-                                    <h6 class="font-alt dark-color font-w-600">Nancy Bayers</h6>
-                                    <span>Co-founder</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / -->
-                    <!-- testimonials -->
-                    <div class="testimonial-col-01">
-                        <div class="media">
-                            <div class="img">
-                                <img src="static/img/team-4.jpg" title="" alt="">
-                            </div>
-                            <div class="media-body p-25px-l">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                                <div class="tc-info">
-                                    <h6 class="font-alt dark-color font-w-600">Nancy Bayers</h6>
-                                    <span>Co-founder</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / -->
-                </div>
-            </div>
-        </section>
-        <!-- End Testiminails -->
-        <!-- Blog -->
-        <section id="blog" class="section white-bg">
-            <div class="container">
-                <div class="row sm-m-25px-b m-35px-b">
-                    <div class="col-md-12">
-                        <div class="section-title">
-                            <h3 class="dark-color text-uppercase">Latest Blogs</h3>
-                            <p class="text-uppercase small">A Lead Content Writer based in Bangladesh</p>
+                            <h3 class="dark-color text-uppercase">Latest Works</h3>
+                            <p class="text-uppercase small">Watch My Recent Awesome works</p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     
                      @php
-                    $blogs = App\Models\Blog::orderBy('created_at', 'desc')->get();
+                     $blogs = App\Models\Blog::orderBy('created_at', 'desc')
+                        ->take(3) // This limits the query to the latest 3 blog posts
+                      ->get();
                     
-                        $count=0;
                     @endphp
                         <!-- Table rows with data -->
                         @foreach( $blogs as $blog)
-                        @php
-                    
-                        $count++;
-                        @endphp
+                       
                     <div class="col-lg-4 m-15px-tb">
                         <div class="blog-grid">
                             <div class="blog-grid-img">
@@ -589,8 +427,110 @@
                 </div>
             </div>
         </section>
-        <!-- End Blog -->
-        <section id="contactus" class="section gray-bg">
+        <!-- End work -->
+        <!-- Testiminails -->
+        <section class="section gray-bg">
+            <div class="container">
+                <div class="row sm-m-25px-b m-35px-b">
+                    <div class="col-md-12">
+                        <div class="section-title">
+                            <h3 class="dark-color text-uppercase">Testimonials</h3>
+                            <p class="text-uppercase small">A Lead {{ $proName->designation }} based in Bangladesh</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="client-review-carousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#client-review-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#client-review-carousel" data-slide-to="1"></li>
+                            <li data-target="#client-review-carousel" data-slide-to="2"></li>
+                            <li data-target="#client-review-carousel" data-slide-to="3"></li>
+                        </ol>
+
+                        <!-- Slides -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                                <img class="img-thumbnail" style="width:100px;" src="data:image/jpeg;base64,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" alt="">
+                                            </div>
+                                            <div class="col-md-8">
+                                            <p>
+                                                "Sajal Ehsan's content writing service is exceptional. They consistently deliver high-quality, deadline-driven content that exceeds expectations. I highly recommend their team for anyone seeking top-notch content."
+                                            </p>
+                                            <h6 class="font-alt dark-color font-w-600">Mark Anderson</h6>
+                                            <span>CEO</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- Slide 1 -->
+                            <div class="carousel-item ">
+                            <div class="row">
+                                <div class="col-md-4">
+                                <img class="img-thumbnail "src="https://media.licdn.com/dms/image/C5603AQG289VBiL-jUw/profile-displayphoto-shrink_100_100/0/1643183369027?e=1699488000&v=beta&t=wsLOe6CMIXd5igGro7CqQkzbg-JLipMZ-qjOedEErik" alt="Elman">
+                                </div> 
+                                <div class="col-md-8">
+                                <p>{{ $proName->name }} possesses outstanding writing abilities, making him an indispensable asset. His commitment and innovative flair are clear in each piece of content he generates. If you're in search of a skilled tech content writer who can adeptly convey your concepts to a wider audience, {{ $proName->name }} is the ideal selection. His determined pursuit of quality and his ability to simplify complex subjects make him an indispensable contributor to any tech-oriented venture.</p>
+                                <h6 class="font-alt dark-color font-w-600">Elman Uchwas</h6>
+                                <span>Co-founder</span>
+                                </div>
+                            </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                <img class="img-thumbnail " src="https://media.licdn.com/dms/image/D5603AQHke2yjWVwIJw/profile-displayphoto-shrink_100_100/0/1672046163372?e=1699488000&v=beta&t=ppG4f8SyZuJwMXU6j_WHOixj6HUk_sdgGUQSiuzvw5g" alt="">
+                                </div>
+                                <div class="col-md-8">
+                                <p>
+                                I'm delighted to recommend {{$proName->name}} as a tech content writer. His ability to distill complex technical topics into clear and engaging content is truly impressive.
+
+                                    {{$proName->name}} consistently delivers high-quality articles, blog posts, and documentation that not only inform but also inspire readers. His passion for technology shines through in every piece he creates.                                </p>
+                                      <h6 class="font-alt dark-color font-w-600">Abu Naeem</h6>
+                                <span>Content Writer</span>
+                                </div>
+                            </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                <img  class="img-thumbnail "  src="https://media.licdn.com/dms/image/C5603AQEfh93zTImAcg/profile-displayphoto-shrink_100_100/0/1630252794758?e=1699488000&v=beta&t=LRrLmh-YbnmTrQjdjm2GPvt3a7t1A4dkkRTk6Nn9Mdo" alt="">
+                                </div>
+                                <div class="col-md-8">
+                                <p>
+                                {{$proName->name}} {{$proName->lastname}} is an energetic and innovative guy.He is known to me since 2014 He is a great entrepreneur, e-learning expert, youth activist & also A great organizer.He is a fast learner and has hard working ability.
+                                </p>    
+                                
+                                <h6 class="font-alt dark-color font-w-600">G M Helal</h6>
+                                <span>Marketing Manager</span>
+                                </div>
+                            </div>
+                            </div>
+
+                            <!-- Slide 4 -->
+                           
+                        </div>
+
+                        <!-- Controls -->
+                        <a class="carousel-control-prev" href="#client-review-carousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#client-review-carousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                        </div>
+            </div>
+        </section>
+        <!-- End Testiminails -->
+        
+        <section id="contactus" class="section ">
             <div class="container">
                 <div class="row sm-m-25px-b m-35px-b">
                     <div class="col-md-12">
@@ -693,7 +633,7 @@
                 </div>
                 <div class="col-md-6 m-10px-tb text-center text-md-right">
                     <a href="{{route('login')}}">Login</a>
-                    <p>© 2023 copyright all right reserved</p>
+                    <p>© 2023 copyright all right reserved by {{$proName->name}}</p>
                 </div>
             </div>
         </div>

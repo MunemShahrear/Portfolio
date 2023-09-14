@@ -13,6 +13,8 @@ class BlogController extends Controller
         $blog->blog_title = $request->blog_title;
         $blog->blog_link = $request->blog_link;
         $blog->blog_image = $request->blog_image;
+        $blog->blog_cat = $request->blog_category;
+        $blog->blog_key = $request->blog_key;
         if ($request->hasFile('blog_image')) {
             $image = $request->file('blog_image');
             $imageName = time() . '.' . $image->getClientOriginalExtension();
@@ -28,6 +30,7 @@ class BlogController extends Controller
        return redirect()->route('create.blog');
 
     }
+    
     public function updateb(Request $request,$id)
         {
             // Validate the incoming request data
