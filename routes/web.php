@@ -17,6 +17,9 @@ Route::get('/blogs', function () {
 })->name('web.blog');
 
 
+
+
+
 // Route::middleware('auth')->group(function () {
    
 
@@ -53,6 +56,7 @@ Route::get('/dashboard', function () {
 Route::post('/create/category', [CategoryController::class, 'category'])->name('blog.category');
 Route::post('/category/{id}', [CategoryController::class,'destroy'])->name('category.destroy');
 
+Route::get('/show/result/', [CategoryController::class, 'sort'])->name('sort.category');
 //Category route End
 
 //Profile route Start

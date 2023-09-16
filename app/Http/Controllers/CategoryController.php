@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\Blog;
 
 class CategoryController extends Controller
 {
@@ -29,5 +30,20 @@ class CategoryController extends Controller
 
                 // Redirect back with a success message
                 return redirect()->route('create.category')->with('success', 'Category deleted successfully.');
+            }
+
+            public function sort(Request $request)
+            {
+
+                if($request->blog_category == 'all_cat'){
+                    $blogsorts = Blog::get();
+                }
+                else{
+               $blogsorts = Blog::where('blog_cat', $request->blog_category)->get();
+              // dd($blogsort);
+            }
+                // Redirect back with a success message
+               
+               return view('frontend.pages.sortBlog', compact('blogsorts'));
             }
 }

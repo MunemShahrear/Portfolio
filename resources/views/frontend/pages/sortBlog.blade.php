@@ -106,7 +106,7 @@
     <div class="form-group">
         <!-- <label for="category">Category:</label> -->
         <select class="form-control" id="blog_category" name="blog_category" required>
-            <option value="">All Categories</option>
+            <option value="all_cat">All Categories</option>
             @foreach( $cats as $category)
                 @php
                 $count++;
@@ -159,7 +159,7 @@
     
       
      @endphp
-     @foreach( $blogs as $blog)
+     @foreach( $blogsorts as $blog)
    
      <div class="col-lg-4 m-15px-tb">
     

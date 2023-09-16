@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Blog;
+use App\Models\Category;
+
+
 
 class BlogController extends Controller
 {
@@ -89,6 +92,9 @@ class BlogController extends Controller
                 return redirect()->route('all.blog')->with('success', 'Item deleted successfully.');
             }
 
+
+           
+            
 }
 
 
