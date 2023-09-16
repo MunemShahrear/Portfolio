@@ -20,7 +20,7 @@ Route::get('/blogs', function () {
 
 
 
-// Route::middleware('auth')->group(function () {
+Route::middleware('auth')->group(function () {
    
 
 
@@ -99,6 +99,6 @@ Route::get('/manage/admin', function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::post('/admin/update', [ProfileController::class, 'update'])->name('profile.update');
     Route::post('/logout', [ProfileController::class, 'destroy'])->name('logout');
-// });
+});
 
 require __DIR__.'/auth.php';
