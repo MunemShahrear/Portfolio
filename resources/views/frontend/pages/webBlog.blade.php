@@ -86,68 +86,59 @@
 
 
     
-        <section id="work" class="section">
-            <div class="container">
+<section id="work" class="section">
+    <div class="container">
            
-            <div class="container mt-4">
-    <div class="row">
-        <div class="col-md-3">
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-3">
             <!-- Search and Category Sidebar -->
-            @php
-      $cats = App\Models\Category::orderBy('created_at', 'asc')->get();
-    
-        $count=0;
-     @endphp
-            <div class="mb-4">
-                <h4>Search</h4>
-                <!-- Category Dropdown -->
-               
-                <form method="GET" action="{{route('sort.category')}}">
-    <div class="form-group">
-        <!-- <label for="category">Category:</label> -->
-        <select class="form-control" id="blog_category" name="blog_category" required>
-            <option value="">All Categories</option>
-            @foreach( $cats as $category)
-                @php
-                $count++;
-                @endphp
-                @php
-                // Count the number of blogs for the current category
-                $blogCount = App\Models\Blog::where('blog_cat', $category->cat_name)->count();
-                @endphp
-                @if($blogCount > 0)
-                    <option value="{{ $category->cat_name }}">{{ $category->cat_name }}</option>
-                @endif
-            @endforeach
-            <!-- Add more categories here -->
-        </select>
-    </div>
-
-    <!-- Add a submit button -->
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-            </div>
-            <div>
+                      @php
+                     $cats = App\Models\Category::orderBy('created_at', 'asc')->get();
+                        $count=0;
+                        @endphp
+                        <div class="mb-4">
+                            <h4>Search</h4>
+                            <form method="GET" action="{{route('sort.category')}}">
+                                    <div class="form-group">
+                                        <!-- <label for="category">Category:</label> -->
+                                        <select class="form-control" id="blog_category" name="blog_category" required>
+                                            <option value="">All Categories</option>
+                                                    @foreach( $cats as $category)
+                                                        @php
+                                                        $count++;
+                                                        @endphp
+                                                        @php
+                                                        // Count the number of blogs for the current category
+                                                        $blogCount = App\Models\Blog::where('blog_cat', $category->cat_name)->count();
+                                                        @endphp
+                                                        @if($blogCount > 0)
+                                                            <option value="{{ $category->cat_name }}">{{ $category->cat_name }}</option>
+                                                        @endif
+                                                    @endforeach
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                      <div>
                 <!-- Category List with Stock Status -->
-                <h4>Categories</h4>
-                <ul class="list-group">
-                    
-                @foreach($cats as $category)
-    @php
-    // Count the number of blogs for the current category
-    $blogCount = App\Models\Blog::where('blog_cat', $category->cat_name)->count();
-    @endphp
-
-    @if($blogCount > 0)
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-            {{ $category->cat_name }}
-            <span class="badge bg-primary rounded-pill">{{ $blogCount }} Blog</span>
-        </li>
-    @endif
-@endforeach
-                    
-                    <!-- Add more categories and stock information here -->
-                </ul>
+                        <h4>Categories</h4>
+                        <ul class="list-group">
+                            
+                            @foreach($cats as $category)
+                            @php
+                            // Count the number of blogs for the current category
+                            $blogCount = App\Models\Blog::where('blog_cat', $category->cat_name)->count();
+                            @endphp
+                            @if($blogCount > 0)
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                {{ $category->cat_name }}
+                                <span class="badge bg-primary rounded-pill">{{ $blogCount }} Blog</span>
+                            </li>
+                            @endif
+                             @endforeach
+                         </ul>
             </div>
         </div>
         <div class="col-md-9">
@@ -155,43 +146,42 @@
             <div class="row">
                 <!-- Sample Product Card (Repeat for each product) -->
                 @php
-      $blogs = App\Models\Blog::orderBy('created_at', 'asc')->get();
-    
-      
-     @endphp
-     @foreach( $blogs as $blog)
-   
-     <div class="col-lg-4 m-15px-tb">
-    
-                        <div id="blogContainer"  class="blog-grid" >
-                            
-                            <div class="blog-grid-item" >
-                                    <div class="blog-grid-img">
+                $blogs = App\Models\Blog::orderBy('created_at', 'asc')->get();
+                @endphp
+
+                @foreach( $blogs as $blog)
+            
+            <div class="col-lg-4 m-15px-tb">
+       
+                <div id="blogContainer"  class="blog-grid "  style="border:1px solid gray;">
+                                    
+                        <div class="blog-grid-item" >
+                                <div class="blog-grid-img">
                                         <a  href="{{ $blog->blog_link }}" target="_blank">
-                                            <img src="{{ asset('uploads/'. $blog->blog_image) }}" title="" alt="">
+                                                <img src="{{ asset('uploads/'. $blog->blog_image) }}" title="" alt="">
                                         </a>
-                                    </div>                                                      
-                                    <div class="blog-gird-info">
+                                </div>                                                      
+                                <div class="blog-gird-info">
                                         <div class="b-meta">
                                             <span class="date">{{ $blog->created_at }}</span>
-                                    
                                         </div>
-                                         <h5><a  href="{{ $blog->blog_link }}" target="_blank">{{ $blog->blog_title }}</a></h5>
-                                
+                                        <h5><a  href="{{ $blog->blog_link }}" target="_blank">{{ $blog->blog_title }}</a></h5>
+                                        
                                         <div class="btn-grid">
-                                             <a class="m-btn-link" href="{{ $blog->blog_link }}" target="_blank">Read More</a>
+                                            <a class="m-btn-link" href="{{ $blog->blog_link }}" target="_blank">Read More</a>
                                         </div>
                                     </div>
                                 </div>
 
                         </div>
-                    </div> <!-- col -->
+                </div> <!-- col -->
+                
                 @endforeach
                 <!-- Repeat this product card for each product -->
+                </div>
             </div>
-        </div>
     </div>
-</div>
+
 
             
         </section>                                                                
