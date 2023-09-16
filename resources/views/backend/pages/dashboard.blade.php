@@ -22,6 +22,19 @@
         </div>
       </div>
     </div>
+
+    @php
+      $blogs = App\Models\Blog::orderBy('created_at', 'desc')->get();
+    
+        $count=0;
+     @endphp
+        <!-- Table rows with data -->
+        @foreach( $blogs as $blog)
+        @php
+     
+        $count++;
+        @endphp
+        @endforeach;
     <!-- Container-fluid starts-->
     <div class="container-fluid general-widget">
         <div class="row">
@@ -31,7 +44,7 @@
                     <div class="media static-top-widget">
                     <div class="align-self-center text-center"><i class="fa fa-newspaper-o fa-2x"></i></div>
                     <div class="media-body"><span class="m-0">Blogs</span>
-                        <h4 class="mb-0 counter">6659</h4><i class="fa fa-newspaper-o fa-5x icon-bg" ></i>
+                        <h4 class="mb-0 counter">{{$count}}</h4><i class="fa fa-newspaper-o fa-5x icon-bg" ></i>
                     </div>
                     </div>
                 </div>
@@ -43,7 +56,7 @@
                     <div class="media static-top-widget">
                     <div class="align-self-center text-center"><i class="fa fa-eye fa-2x"></i></div>
                     <div class="media-body"><span class="m-0">Views</span>
-                        <h4 class="mb-0 counter">9856</h4><i class="fa fa-eye fa-5x icon-bg" ></i>
+                        <h4 class="mb-0 counter"> </h4><i class="fa fa-eye fa-5x icon-bg" ></i>
                     </div>
                     </div>
                 </div>
@@ -55,7 +68,7 @@
                     <div class="media static-top-widget">
                     <div class="align-self-center text-center"><i data-feather="message-circle"></i></div>
                     <div class="media-body"><span class="m-0">Messages</span>
-                        <h4 class="mb-0 counter">893</h4><i class="icon-bg" data-feather="message-circle"></i>
+                        <h4 class="mb-0 counter"> </h4><i class="icon-bg" data-feather="message-circle"></i>
                     </div>
                     </div>
                 </div>
@@ -67,7 +80,7 @@
                     <div class="media static-top-widget">
                     <div class="align-self-center text-center"><i data-feather="user-plus"></i></div>
                     <div class="media-body"><span class="m-0">New User</span>
-                        <h4 class="mb-0 counter">4531</h4><i class="icon-bg" data-feather="user-plus"></i>
+                        <h4 class="mb-0 counter"> </h4><i class="icon-bg" data-feather="user-plus"></i>
                     </div>
                     </div>
                 </div>

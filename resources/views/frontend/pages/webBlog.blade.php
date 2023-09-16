@@ -169,7 +169,7 @@
                                             </div>
                                             <div class="blog-gird-info">
                                                 <div class="b-meta">
-                                                    <span class="date">{{ $blog->created_at }}</span>
+                                                <span class="date">{{ date('d M y', strtotime($blog->created_at)) }}</span>
                                                 </div>
                                                 <h5><a href="{{ $blog->blog_link }}"
                                                         target="_blank">{{ $blog->blog_title }}</a></h5>

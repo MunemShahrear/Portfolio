@@ -6,7 +6,7 @@
           @php
             $year = date('Y');
           @endphp
-          <p class="mb-0">Copyright {{ $year }} © <a href="https://byteengineers.me/" target="_blank">Himel</a></p>
+          <p class="mb-0">Copyright {{ $year }} © <a href="https://byteengineers.me/" target="_blank">Byte Engineers</a></p>
         </div>
       </div>
     </div>
